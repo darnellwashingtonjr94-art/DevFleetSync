@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  devfleetsync:
+    image: credkellar/devfleetsync:latest
+    container_name: devfleetsync_bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      # Define any required database URIs or bot API tokens here
+      # - BOT_TOKEN=${BOT_TOKEN}
