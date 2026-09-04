@@ -1,7 +1,7 @@
 # Video-Gateway: Real-Time Engagement Engine
 
-[![Build Status](https://github.com/credkellar-boop/video-gateway/actions/workflows/deploy-gateway.yml/badge.svg)](https://github.com/credkellar-boop/video-gateway/actions)
-[![Security Audit](https://img.shields.io/badge/security-validated-green.svg)](https://github.com/credkellar-boop/video-gateway/security)
+[![Build Status](https://github.com/darnellwashingtonjr94-art/video-gateway/actions/workflows/deploy-gateway.yml/badge.svg)](https://github.com/darnellwashingtonjr94-art/video-gateway/actions)
+[![Security Audit](https://img.shields.io/badge/security-validated-green.svg)](https://github.com/darnellwashingtonjr94-art/video-gateway/security)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Reputation-Gated](https://img.shields.io/badge/Access-Deployma-purple.svg)](https://deployma.io)
 
