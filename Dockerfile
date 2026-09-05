@@ -2,6 +2,9 @@
 FROM rust:slim as builder
 WORKDIR /usr/src/app
 
+# Install system dependencies required to compile OpenSSL
+RUN apt-get update && apt-get install -y pkg-config libssl-dev
+
 # Copy the source code
 COPY . .
 
@@ -12,12 +15,11 @@ RUN cargo build --release
 FROM debian:bookworm-slim
 WORKDIR /app
 
-# Install any necessary runtime dependencies (e.g., certificates for network requests)
-RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y ca-certificates libssl3 && rm -rf /var/lib/apt/lists/*
 
 # Copy the compiled binary from the builder stage
-# IMPORTANT: Replace "YOUR_APP_NAME" with the actual package name from your Cargo.toml
-COPY --from=builder /usr/src/app/target/release/YOUR_APP_NAME ./
+COPY --from=builder /usr/src/app/target/release/DevFleetSync ./
 
 # Run the binary
-CMD ["./YOUR_APP_NAME"]
+CMD ["./DevFleetSync"]
